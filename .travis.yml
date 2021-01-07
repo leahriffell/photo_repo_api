@@ -10,7 +10,7 @@ deploy:
   provider: heroku
   api_key:
     secure: jRVHIdbzhlwdJnuyb4pshhZXPxPMdVqxJLsWSek56jkwvg39TXBhNDvYLdxY6Yex4MoVZtYIE1REqXMffh5oNCvb9EnocKUBFBKY+b0YAtwfBOuYWj0qbddEIsxEiPNwQDgZSTB9Q/8i4tHPpDJ/9JjCFZc7+eYA6KLi+MW2sr8grzlEO2d2vlPm35CsHVU8osAfnp85AMozMgYIACr+lqn/uSsj6uobLLYTI5aZO8zonApqK7Cbxko/GLqhZCcpZN2C7ADT+n7U0A6nOIdKcJu/zaF2tEkD0o3m+6y97mYk4AiUqI/pcNZ6h1dHk1VhxNvY9/F8h/OB8S11nOVNRcbZevolT2Xm9nY+JD6S1aTjVUazObcOMHnGUziMH1hJeuF7vRlRvgS4owSaMpuuA4aTsiPUWAaBryJ9FB2rWLqoGmFWCwEVYobmKftUBhIGYxOEc2xCtfHKzVtfRwNvlCkxy3P4MCoTIloudnWm2QA5QM54Ut4gHO+gUvrOvn6xTeOK/9qmKpz5mX8sRfg4qKjW/FIxz112TidtWz5WjhZ5J9SeJDzd6SKVep7aBqPQbjMSzL474D8vT5Ab75e6mv3sW5o56SVPr736b37L4d07uBEADyVS6FRm8xFEt64SlPtc0/k9TEI86dHzepMvV/nIEmndtQR8J7gq8z5VQmI=
-  app: photo_repo_api
+  app: photo-repo-api
   on:
     repo: photo_repo_api
     branch: main
