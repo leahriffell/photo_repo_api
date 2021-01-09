@@ -1,4 +1,4 @@
-**What was changed*
+**What was changed**
 
 **Tracking**
 - Closes # 
