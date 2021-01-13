@@ -4,14 +4,14 @@ RSpec.describe PhotoService do
   describe 'happy paths' do
     it 'can fetch photos by query keyword' do
       VCR.use_cassette('photos_italy') do
-        response = PhotoService.search_images('Italy')
+        response = PhotoService.search_photos('Italy')
         photo_search_response_structure(response)
       end
     end
 
     it 'can fetch photos for query with 2 keywords' do
       VCR.use_cassette('photos_UK') do
-        response = PhotoService.search_images('United Kingdom')
+        response = PhotoService.search_photos('United Kingdom')
         photo_search_response_structure(response)
       end
     end
@@ -20,7 +20,7 @@ RSpec.describe PhotoService do
   describe 'sad paths' do
     it 'returns no matching photos' do
       VCR.use_cassette('photos_no_results') do
-        response = PhotoService.search_images('abcdefgh')
+        response = PhotoService.search_photos('abcdefgh')
         expect(response).to be_a(Hash)
 
         expect(response).to have_key(:total)
