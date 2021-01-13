@@ -1,13 +1,11 @@
 module Types
   class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :search_photos, [Types::PhotoType], null: false, description: 'Returns 10 photos that match a search term' do
+      argument :keyword, String, required: true
+    end
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-                               description: 'An example field added by the generator'
-    def test_field
-      'Hello World!'
+    def search_photos(keyword:)
+      PhotoFacade.get_photos(keyword)
     end
   end
 end
