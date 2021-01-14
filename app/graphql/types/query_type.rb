@@ -4,8 +4,16 @@ module Types
       argument :keyword, String, required: true
     end
 
+    field :get_users, [Types::UserType], null: false, description: 'Returns a list of all users'
+
+    # Photos
     def search_photos(keyword:)
       PhotoFacade.get_photos(keyword)
+    end
+
+    # Users
+    def get_users
+      User.all
     end
   end
 end
