@@ -6,7 +6,7 @@ RSpec.describe 'Photo Facade' do
       photos = PhotoFacade.get_photos('Italy')
 
       photos.each do |photo|
-        expect(photo).to be_a(Photo)
+        expect(photo).to be_a(PhotoDetails)
         expect(photo.description).to be_a(String).or eq(nil)
         expect(photo.url).to be_a(String)
         expect(photo.artist_name).to be_a(String)

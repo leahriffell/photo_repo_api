@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Photo PORO' do
+RSpec.describe 'Photo Details PORO' do
   it 'exists' do 
     attributes = {
       :id=>"rknrvCrfS1k",
@@ -66,9 +66,9 @@ RSpec.describe 'Photo PORO' do
 
     symbolized_attr = attributes.deep_symbolize_keys
     
-    photo = Photo.new(symbolized_attr)
+    photo = PhotoDetails.new(symbolized_attr)
 
-    expect(photo).to be_a(Photo)
+    expect(photo).to be_a(PhotoDetails)
 
     expect(photo.description).to eq(symbolized_attr[:description])
     expect(photo.url).to eq(symbolized_attr[:urls][:regular])
