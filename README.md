@@ -4,10 +4,15 @@
 
 This [GraphQL on Rails API](https://photo-repo-api.herokuapp.com/graphql) serves queries and mutations for Virtual Escape, an application that allows you to travel in covid-safe style from your couch (or, let's be real, bed). There's a whole world out there so put on your best sweats amd come TFH (travel from home)!
 
+What can I do on Virtual Escape?
+  - Search for a destination and see matching photos
+  - Create trips (these could be places that you've been to or are on your wanderlust list)
+  - Add photos to your trips (photos from your search results or that you upload yourself)
+
 I created this API for my application to Shopify's Backend Engineering Internship program. This is an API only (no user interface) but I plan on building out a separate frontend. 
 
 ## Readme Content
-- [Features](#features)
+- [Stack & Tools](#stack-and-tools)
 - [User Interface](#user-interface)
 - [Local Setup](#local-setup)
 - [Test Suite](#test-suite)
