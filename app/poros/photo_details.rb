@@ -1,4 +1,4 @@
-class Photo
+class PhotoDetails
   attr_reader :description,
               :url,
               :artist_name,
