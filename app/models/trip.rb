@@ -4,5 +4,5 @@ class Trip < ApplicationRecord
   has_many :photos, through: :photo_trips
 
   validates :name, presence: true
-  validates :traveled_to?, presence: true
+  validates :traveled_to, presence: true
 end
