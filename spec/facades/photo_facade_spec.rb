@@ -11,6 +11,7 @@ RSpec.describe 'Photo Facade' do
         expect(photo.url).to be_a(String)
         expect(photo.artist_name).to be_a(String)
         expect(photo.artist_profile).to be_a(String)
+        expect(photo.unsplash_id).to be_a(String)
       end
     end
   end

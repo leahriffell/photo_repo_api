@@ -7,6 +7,9 @@ module Helpers
     first_result = response[:results][0]
     expect(first_result).to be_a(Hash)
 
+    expect(first_result).to have_key(:id)
+    expect(first_result[:id]).to be_a(String)
+
     expect(first_result).to have_key(:description)
     expect(first_result[:description]).to be_a(String).or eq(nil)
 

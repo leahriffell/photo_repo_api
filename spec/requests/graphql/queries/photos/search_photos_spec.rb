@@ -11,9 +11,15 @@ RSpec.describe Types::QueryType do
 
         result[:data][:searchPhotos].each do |result|
           expect(result).to have_key(:description)
+          expect(result[:description]).to be_a(String)
           expect(result).to have_key(:url)
+          expect(result[:url]).to be_a(String)
           expect(result).to have_key(:artistName)
+          expect(result[:artistName]).to be_a(String)
           expect(result).to have_key(:artistProfile)
+          expect(result[:artistProfile]).to be_a(String)
+          expect(result).to have_key(:unsplashID)
+          expect(result[:unsplashID]).to be_a(String)
         end
       end
     end
@@ -36,6 +42,7 @@ RSpec.describe Types::QueryType do
           url
           artistName
           artistProfile
+          unsplashID
         }
       }
     GQL

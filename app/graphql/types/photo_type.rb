@@ -4,5 +4,6 @@ module Types
     field :url, String, null: false
     field :artist_name, String, null: false
     field :artist_profile, String, null: false
+    field :unsplash_id, String, null: true
   end
 end
