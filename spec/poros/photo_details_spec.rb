@@ -74,5 +74,6 @@ RSpec.describe 'Photo Details PORO' do
     expect(photo.url).to eq(symbolized_attr[:urls][:regular])
     expect(photo.artist_name).to eq(symbolized_attr[:user][:name])
     expect(photo.artist_profile).to eq(symbolized_attr[:user][:links][:html])
+    expect(photo.unsplash_id).to eq(symbolized_attr[:id])
   end
 end
