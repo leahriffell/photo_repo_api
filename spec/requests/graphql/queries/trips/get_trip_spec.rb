@@ -43,7 +43,24 @@ RSpec.describe Types::QueryType do
       end
     end
 
-  # get a trip with no photos
+    it 'can get trip without photos by ID' do   
+      post graphql_path, params: { query: query(id: @user.trips[1].id) }
+      result = JSON.parse(response.body, symbolize_names: true)
+      data = result[:data][:getTrip]
+
+      expect(data).to have_key(:id)
+      expect(data[:id]).to eq(@user.trips[1].id.to_s)
+
+      expect(data).to have_key(:userId)
+      expect(data[:userId]).to eq(@user.id.to_s)
+
+      expect(data).to have_key(:traveledTo)
+      expect(data[:traveledTo]).to eq(true).or eq(false)
+
+      expect(data).to have_key(:photos)
+      expect(data[:photos]).to be_an(Array)
+      expect(data[:photos].empty?).to eq(true)
+    end
 
     def query(id:)
       <<~GQL
