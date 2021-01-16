@@ -19,11 +19,12 @@ RSpec.describe Mutations::Trips::CreateTrip, type: :request do
 
         expect(Trip.count).to eq(1)
         data = result[:data][:createTrip]
+
         expect(data[:userId]).to eq(@user.id.to_s)
         expect(data[:destination]).to eq(attributes[:destination])
         expect(data[:traveledTo]).to eq(attributes[:traveledTo])
-        expect(data[:latitude]).to eq(attributes[17.62462])
-        expect(data[:longitude]).to eq(attributes[-88.10969])
+        expect(data[:latitude]).to eq(17.62462)
+        expect(data[:longitude]).to eq(-88.10969)
       end
     end
 

@@ -8,6 +8,9 @@ module Mutations
       type Types::TripType
 
       def resolve(attributes)
+        latlng = GeolocationService.forward_geocode(attributes[:destination])
+        attributes[:latitude] = latlng[:lat]
+        attributes[:longitude] = latlng[:lng]
         Trip.create!(attributes)
       end
     end
