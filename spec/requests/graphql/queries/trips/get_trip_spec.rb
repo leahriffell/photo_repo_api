@@ -26,6 +26,12 @@ RSpec.describe Types::QueryType do
       expect(data).to have_key(:traveledTo)
       expect(data[:traveledTo]).to eq(true).or eq(false)
 
+      expect(data).to have_key(:latitude)
+      expect(data[:latitude]).to eq(@trip.latitude)
+
+      expect(data).to have_key(:longitude)
+      expect(data[:longitude]).to eq(@trip.longitude)
+
       expect(data).to have_key(:photos)
       expect(data[:photos]).to be_an(Array)
       expect(data[:photos].size).to eq(3)
@@ -76,6 +82,8 @@ RSpec.describe Types::QueryType do
             destination
             userId
             traveledTo
+            latitude
+            longitude
             photos {
               id
               url

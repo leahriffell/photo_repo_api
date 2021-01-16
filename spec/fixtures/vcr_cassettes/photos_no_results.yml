@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.unsplash.com/search/photos?client_id=zNSOFAF4GSSlCDkob_piOkcGE6rAIhRG1UgqNpSTHH8&per_page=10&query=abcdefgh
+    uri: https://api.unsplash.com/search/photos?client_id=<PHOTOS_API_KEY>&per_page=10&query=abcdefgh
     body:
       encoding: US-ASCII
       string: ''
@@ -45,11 +45,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '50'
       X-Ratelimit-Remaining:
-      - '45'
+      - '48'
       X-Request-Id:
-      - c9456ef2-aca4-425b-a720-57165740e5ab
+      - 3e2bf854-977a-4015-9a62-fd3dfe4de236
       X-Runtime:
-      - '0.295344'
+      - '0.097667'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Via:
@@ -57,21 +57,21 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 09 Jan 2021 23:05:10 GMT
+      - Sat, 16 Jan 2021 23:32:09 GMT
       Age:
       - '0'
       X-Served-By:
-      - cache-dca17774-DCA, cache-den8269-DEN
+      - cache-dca17766-DCA, cache-den8247-DEN
       X-Cache:
       - MISS, MISS
       X-Cache-Hits:
       - 0, 0
       X-Timer:
-      - S1610233510.029439,VS0,VE345
+      - S1610839930.517045,VS0,VE148
       Vary:
       - Accept-Encoding, Origin,Authorization,client-geo-region
     body:
       encoding: ASCII-8BIT
       string: '{"total":0,"total_pages":0,"results":[]}'
-  recorded_at: Sat, 09 Jan 2021 23:05:10 GMT
+  recorded_at: Sat, 16 Jan 2021 23:32:09 GMT
 recorded_with: VCR 6.0.0

@@ -29,8 +29,8 @@ RSpec.describe GeolocationService do
         expect(response).to be_a(Hash)
         expect(response).to have_key(:lat)
         expect(response).to have_key(:lng)
-        expect(response[:lat]).to eq('no match')
-        expect(response[:lng]).to eq('no match')
+        expect(response[:lat]).to eq(nil)
+        expect(response[:lng]).to eq(nil)
       end
     end
   end

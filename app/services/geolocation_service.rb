@@ -20,7 +20,7 @@ class GeolocationService
 
   def self.parse_lat_lng(response)
     if response[:results][0][:locations].empty?
-      {lat: 'no match', lng: 'no match'}
+      {lat: nil, lng: nil}
     else
       response[:results][0][:locations][0][:latLng]
     end
