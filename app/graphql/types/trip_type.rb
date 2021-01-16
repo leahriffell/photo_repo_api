@@ -4,5 +4,6 @@ module Types
     field :user_id, ID, null: false
     field :name, String, null: true
     field :traveled_to, Boolean, null: false
+    field :photos, [Types::PhotoType], null: false
   end
 end
