@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :trip do
-    name { Faker::JapaneseMedia::StudioGhibli.character }
+    destination { Faker::Nation.capital_city }
     traveled_to { [true, false].sample }
     association :user
   end

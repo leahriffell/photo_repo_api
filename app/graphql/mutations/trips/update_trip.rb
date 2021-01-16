@@ -2,7 +2,7 @@ module Mutations
   module Trips
     class UpdateTrip < Mutations::BaseMutation
       argument :id, ID, required: true
-      argument :name, String, required: false
+      argument :destination, String, required: false
       argument :traveled_to, Boolean, required: false
 
       type Types::TripType

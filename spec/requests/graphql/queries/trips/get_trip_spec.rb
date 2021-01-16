@@ -17,6 +17,9 @@ RSpec.describe Types::QueryType do
       expect(data).to have_key(:id)
       expect(data[:id]).to eq(@trip.id.to_s)
 
+      expect(data).to have_key(:destination)
+      expect(data[:destination]).to eq(@trip.destination)
+
       expect(data).to have_key(:userId)
       expect(data[:userId]).to eq(@user.id.to_s)
 
@@ -51,6 +54,9 @@ RSpec.describe Types::QueryType do
       expect(data).to have_key(:id)
       expect(data[:id]).to eq(@user.trips[1].id.to_s)
 
+      expect(data).to have_key(:destination)
+      expect(data[:destination]).to eq(@user.trips[1].destination)
+
       expect(data).to have_key(:userId)
       expect(data[:userId]).to eq(@user.id.to_s)
 
@@ -67,7 +73,7 @@ RSpec.describe Types::QueryType do
         {
           getTrip(id: "#{id}") {
             id
-            name
+            destination
             userId
             traveledTo
             photos {
