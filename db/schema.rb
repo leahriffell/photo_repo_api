@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_01_15_021749) do
     t.string "url"
     t.string "artist_name"
     t.string "artist_profile"
-    t.boolean "user_uploaded?"
+    t.boolean "user_uploaded", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "unsplash_id"
