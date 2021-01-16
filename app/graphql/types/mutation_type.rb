@@ -2,6 +2,7 @@ module Types
   class MutationType < Types::BaseObject
     # Trips
     field :create_trip, mutation: Mutations::Trips::CreateTrip, description: 'Create a new trip'
+    field :update_trip, mutation: Mutations::Trips::UpdateTrip, description: 'Update a trip'
 
     # Photos
     field :add_photo_to_trip, mutation: Mutations::Photos::AddPhotoToTrip,
