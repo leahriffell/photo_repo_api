@@ -4,7 +4,7 @@ class CreatePhotos < ActiveRecord::Migration[6.1]
       t.string :url, index: { unique: true }
       t.string :artist_name
       t.string :artist_profile
-      t.boolean :user_uploaded?
+      t.boolean :user_uploaded, null: false
 
       t.timestamps
     end

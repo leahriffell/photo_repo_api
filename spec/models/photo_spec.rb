@@ -8,7 +8,6 @@ RSpec.describe Photo, type: :model do
   
   describe 'validations' do
     it { should validate_presence_of :url }
-    it { should validate_uniqueness_of :url }
-    it { should validate_presence_of :user_uploaded? }
+    it { should validate_uniqueness_of :unsplash_id }
   end
 end
