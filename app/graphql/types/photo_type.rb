@@ -1,5 +1,6 @@
 module Types
   class PhotoType < Types::BaseObject
+    field :id, ID, null: false
     field :description, String, null: true
     field :url, String, null: false
     field :artist_name, String, null: true
