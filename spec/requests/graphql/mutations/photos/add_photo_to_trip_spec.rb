@@ -28,6 +28,7 @@ RSpec.describe Mutations::Photos::AddPhotoToTrip, type: :request do
       expect(data[:artistName]).to eq(@attributes[:artistName])
       expect(data[:artistProfile]).to eq(@attributes[:artistProfile])
       expect(data[:unsplashId]).to eq(@attributes[:unsplashId])
+      expect(data[:userUploaded]).to eq(nil)
     end
 
     it 'does not create an Unsplash photo without attribution' do
@@ -43,6 +44,7 @@ RSpec.describe Mutations::Photos::AddPhotoToTrip, type: :request do
               artistName
               artistProfile
               unsplashId
+              userUploaded
             }
           }
         GQL
