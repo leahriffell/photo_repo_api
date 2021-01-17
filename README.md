@@ -189,7 +189,7 @@ Endpoint: [https://photo-repo-api.herokuapp.com/graphql](https://photo-repo-api.
     ```
 
 ## Database Schema
-<img src="app/assets/images/schema.png" alt="database-schema" width="400"><br>
+<img src="app/assets/images/schema.png" alt="database-schema" width="700"><br>
 
 ## Project Tracking
 **[GitHub project](https://github.com/leahriffell/photo_repo_api/projects/1)**
