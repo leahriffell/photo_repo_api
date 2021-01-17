@@ -6,13 +6,16 @@ This [GraphQL on Rails API](https://photo-repo-api.herokuapp.com/graphql) serves
 
 What can I do on Virtual Escape?
   - Search for a destination and see matching photos
-  - Create trips (these could be places that you've been to or are on your wanderlust list)
-  - Add photos to your trips (photos from your search results or that you upload yourself)
+  - Create trips (these could be places that you've been to or have yet to visit)
+  - Add photos to your trip
+    - upload a file
+    - or save from your search results
 
 ## Readme Content
 - [Approaching the Challenge](#approaching-the-challenge)
 - [User Interface](#user-interface)
 - [Local Setup](#local-setup)
+- [External APIs](#external-apis)
 - [Test Suite](#test-suite)
 - [GraphQL Schema](#graphql-schema)
 - [Database Schema](#database-schema)
@@ -32,6 +35,13 @@ I created this API for my application to Shopify's Backend Engineering Internshi
 - `cd` in your local repo version and run the following commands
   - To install gems:
     -  `bundle` (if this fails, try to `bundle update` and then retry)
+  - This API uses a few [external APIs](#external-apis)
+    - Add a local application.yml file at the root (this will be ignored in gitcoverage)
+    - Get API keys for the [Unsplash](https://unsplash.com/join) and [Mapquest](https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register) API and add to your application.yml config: 
+    ```
+    PHOTOS_API_KEY: your_key_here
+    GEOLOCATION_API_KEY: your_key_here
+    ```
   - To setup database:
     - `rails db:create`
     - `rails db:migrate`
@@ -39,6 +49,12 @@ I created this API for my application to Shopify's Backend Engineering Internshi
 - Run your own development server:
   - `rails s`
   - You should be able to access the GraphQL interface and see available queries and mutations via the docs on [http://localhost:3000/graphiql](http://localhost:3000/graphiql)
+
+## External APIs
+This API consumes the following APIs:
+- [Unsplash Search Photos API](https://unsplash.com/documentation#search-photos) to search for images at a destination
+  - Requirements for use: [properly provide attribution for the photographer and Unsplash](https://help.unsplash.com/en/articles/2511315-guideline-attribution)
+- [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/) to assign latitude and longitude to a trip's location
 
 ## Test Suite
 - Run with `bundle exec rspec`
@@ -68,7 +84,7 @@ I created this API for my application to Shopify's Backend Engineering Internshi
 ## Project Tracking
 [GitHub project](https://github.com/leahriffell/photo_repo_api/projects/1)
 
-Next steps:
+Next priorities:
   - user authentication with Firebase or Auth0
 
 
