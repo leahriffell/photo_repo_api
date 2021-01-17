@@ -17,11 +17,20 @@ RSpec.describe Types::QueryType do
       expect(data).to have_key(:id)
       expect(data[:id]).to eq(@trip.id.to_s)
 
+      expect(data).to have_key(:destination)
+      expect(data[:destination]).to eq(@trip.destination)
+
       expect(data).to have_key(:userId)
       expect(data[:userId]).to eq(@user.id.to_s)
 
       expect(data).to have_key(:traveledTo)
       expect(data[:traveledTo]).to eq(true).or eq(false)
+
+      expect(data).to have_key(:latitude)
+      expect(data[:latitude]).to eq(@trip.latitude)
+
+      expect(data).to have_key(:longitude)
+      expect(data[:longitude]).to eq(@trip.longitude)
 
       expect(data).to have_key(:photos)
       expect(data[:photos]).to be_an(Array)
@@ -51,6 +60,9 @@ RSpec.describe Types::QueryType do
       expect(data).to have_key(:id)
       expect(data[:id]).to eq(@user.trips[1].id.to_s)
 
+      expect(data).to have_key(:destination)
+      expect(data[:destination]).to eq(@user.trips[1].destination)
+
       expect(data).to have_key(:userId)
       expect(data[:userId]).to eq(@user.id.to_s)
 
@@ -67,9 +79,11 @@ RSpec.describe Types::QueryType do
         {
           getTrip(id: "#{id}") {
             id
-            name
+            destination
             userId
             traveledTo
+            latitude
+            longitude
             photos {
               id
               url

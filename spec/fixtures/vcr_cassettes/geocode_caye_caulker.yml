@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<GEOLOCATION_API_KEY>&location=Caye%20Caulker,%20Belize
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 Jan 2021 22:34:26 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '2451'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Sat, 16 Jan 2021 22:34:26 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=0AE5CF7C8C04249908F4960BF3920ECB; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Caye
+        Caulker, Belize"},"locations":[{"street":"Belize City - Caye Caulker","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Belize","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"BZ","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"B3CAA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"BZ/STR/p0/1627","unknownInput":"","type":"s","latLng":{"lat":17.62462,"lng":-88.10969},"displayLatLng":{"lat":17.62462,"lng":-88.10969},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<GEOLOCATION_API_KEY>&type=map&size=225,160&locations=17.62462,-88.10969|marker-sm-50318A-1&scalebar=true&zoom=15&rand=459874377"},{"street":"Caye
+        Caulker - San Pedro","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Belize","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"BZ","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"B3CAA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"BZ/STR/p0/1628","unknownInput":"","type":"s","latLng":{"lat":17.82892,"lng":-88.00313},"displayLatLng":{"lat":17.82892,"lng":-88.00313},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<GEOLOCATION_API_KEY>&type=map&size=225,160&locations=17.82892,-88.00313|marker-sm-50318A-2&scalebar=true&zoom=15&rand=1227646122"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Belize","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"BZ","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"BZ/GEO/p0/94","unknownInput":"","type":"s","latLng":{"lat":17.74029,"lng":-88.02604},"displayLatLng":{"lat":17.74029,"lng":-88.02604},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<GEOLOCATION_API_KEY>&type=map&size=225,160&locations=17.74029,-88.02604|marker-sm-50318A-3&scalebar=true&zoom=12&rand=-937958729"}]}]}'
+  recorded_at: Sat, 16 Jan 2021 22:34:26 GMT
+recorded_with: VCR 6.0.0

@@ -8,6 +8,6 @@ RSpec.describe Trip, type: :model do
   end
   
   describe 'validations' do
-    it { should validate_presence_of :name }
+    it { should validate_presence_of :destination }
   end
 end

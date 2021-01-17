@@ -7,20 +7,47 @@ RSpec.describe Mutations::Trips::CreateTrip, type: :request do
     end
 
     it 'creates a trip' do
-      attributes = {
-        userId: @user.id,
-        name: 'Caye Caulker, Belize',
-        traveledTo: false
-      }
+      VCR.use_cassette('geocode_caye_caulker') do
+        attributes = {
+          userId: @user.id,
+          destination: 'Caye Caulker, Belize',
+          traveledTo: false
+        }
 
-      post graphql_path, params: { query: query(attributes) }
-      result = JSON.parse(response.body)
+        post graphql_path, params: { query: query(attributes) }
+        result = JSON.parse(response.body, symbolize_names: true)
 
-      expect(Trip.count).to eq(1)
-      data = result['data']['createTrip']
-      expect(data['userId']).to eq(@user.id.to_s)
-      expect(data['name']).to eq(attributes[:name])
-      expect(data['traveledTo']).to eq(attributes[:traveledTo])
+        expect(Trip.count).to eq(1)
+        data = result[:data][:createTrip]
+
+        expect(data[:userId]).to eq(@user.id.to_s)
+        expect(data[:destination]).to eq(attributes[:destination])
+        expect(data[:traveledTo]).to eq(attributes[:traveledTo])
+        expect(data[:latitude]).to eq(17.62462)
+        expect(data[:longitude]).to eq(-88.10969)
+      end
+    end
+
+    it 'creates a trip without matching lat and lng coordinates' do
+      VCR.use_cassette('geocode_no_match') do
+        attributes = {
+          userId: @user.id,
+          destination: 'abcdefghijklmnop',
+          traveledTo: false
+        }
+
+        post graphql_path, params: { query: query(attributes) }
+        result = JSON.parse(response.body, symbolize_names: true)
+
+        expect(Trip.count).to eq(1)
+        data = result[:data][:createTrip]
+
+        expect(data[:userId]).to eq(@user.id.to_s)
+        expect(data[:destination]).to eq(attributes[:destination])
+        expect(data[:traveledTo]).to eq(attributes[:traveledTo])
+        expect(data[:latitude]).to eq(nil)
+        expect(data[:longitude]).to eq(nil)
+      end
     end
 
     def query(attributes)
@@ -28,13 +55,15 @@ RSpec.describe Mutations::Trips::CreateTrip, type: :request do
         mutation {
           createTrip(input:{
               userId: "#{attributes[:userId]}"
-              name: "#{attributes[:name]}"
+              destination: "#{attributes[:destination]}"
               traveledTo: #{attributes[:traveledTo]}
               }) {
                 id
                 userId
-                name
+                destination
                 traveledTo
+                latitude
+                longitude
               }
             }
       GQL

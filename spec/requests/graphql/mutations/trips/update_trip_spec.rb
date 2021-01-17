@@ -8,7 +8,7 @@ RSpec.describe Mutations::Trips::UpdateTrip, type: :request do
       @trip = @user.trips.first
 
       @attributes = {
-        name: 'Ottawa, Canada',
+        destination: 'Ottawa, Canada',
         traveledTo: true
       }
     end
@@ -20,7 +20,7 @@ RSpec.describe Mutations::Trips::UpdateTrip, type: :request do
 
       expect(data[:id]).to eq(@trip.id.to_s)
       expect(data[:userId]).to eq(@user.id.to_s)
-      expect(data[:name]).to eq(@attributes[:name])
+      expect(data[:destination]).to eq(@attributes[:destination])
       expect(data[:traveledTo]).to eq(@attributes[:traveledTo])
     end
 
@@ -29,12 +29,12 @@ RSpec.describe Mutations::Trips::UpdateTrip, type: :request do
         mutation {
           updateTrip(input:{
               id: #{id}
-              name: "#{@attributes[:name]}"
+              destination: "#{@attributes[:destination]}"
               traveledTo: #{@attributes[:traveledTo]}
               }) {
                 id
                 userId
-                name
+                destination
                 traveledTo
               }
             }
