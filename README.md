@@ -2,7 +2,7 @@
 
 ![rails-badge](https://img.shields.io/badge/Rails-6.1.0-informational?style=flat-square) ![ruby-badge](https://img.shields.io/badge/Ruby-2.5.3-informational?style=flat-square) ![build-badge](https://img.shields.io/travis/leahriffell/photo_repo_api/main?style=flat-square) ![closed-pr-badge](https://img.shields.io/github/issues-pr-closed-raw/leahriffell/photo_repo_api?style=flat-square)
 
-This GraphQL on Rails API ([deployed endpoint](https://photo-repo-api.herokuapp.com/graphql)) serves queries and mutations for Virtual Escape, an application that allows you to travel in covid-safe style from your couch (or, let's be real, bed). There's a whole world out there so put on your best sweats amd come TFH (travel from home)!
+This GraphQL on Rails API ([deployed endpoint](https://photo-repo-api.herokuapp.com/graphql)) serves queries and mutations for Virtual Escape, an application that allows you to travel in covid-safe style from your couch (or, let's be real, bed). There's a whole world out there so put on your best sweats and come TFH (travel from home)!
 
 #### What can I do on Virtual Escape?
   - Search for a destination and see matching photos
@@ -74,7 +74,7 @@ This API consumes the following APIs:
 - 97% test coverage
 
 ## GraphQL Schema
-Endpoint: [https://photo-repo-api.herokuapp.com/graphql](https://photo-repo-api.herokuapp.com/graphql)
+Endpoint (direct your POST requests here): https://photo-repo-api.herokuapp.com/graphql
 
 ### Resource Queries
 #### Photos
