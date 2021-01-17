@@ -5,5 +5,6 @@ FactoryBot.define do
     artist_profile { Faker::Internet.url }
     user_uploaded { [true, false].sample }
     unsplash_id { Faker::Internet.password }
+    user_photo_url { Faker::Avatar.image }
   end
 end

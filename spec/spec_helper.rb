@@ -17,7 +17,21 @@ require 'helpers'
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'simplecov'
-SimpleCov.start
+
+SimpleCov.start 'rails' do
+  class BaseFilter < SimpleCov::Filter
+    def matches?(source_file)
+      source_file.filename.include?(filter_argument)
+    end
+  end
+
+  add_filter '/app/channels/'
+  add_filter 'spec/'
+  add_filter '/app/jobs/'
+  add_filter '/app/mailers/'
+  add_filter '/app/controllers/graphql_controller.rb'
+  add_filter BaseFilter.new("types/base_")
+end
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
