@@ -20,9 +20,17 @@ module Types
     field :get_trip, Types::TripType, null: false, description: 'Returns a trip by trip id' do
       argument :id, ID, required: true
     end
+    field :top_destinations, [Types::DestinationType], null: false,
+                                                       description: 'Returns top destinations (most saved trips)' do
+      argument :limit, Integer, required: false
+    end
 
     def get_trip(id:)
       Trip.find(id)
+    end
+
+    def top_destinations(limit: Trip.count)
+      Trip.top_trips(limit)
     end
   end
 end
