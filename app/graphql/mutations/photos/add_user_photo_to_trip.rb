@@ -22,7 +22,6 @@ module Mutations
         )
 
         PhotoTrip.create!(photo_id: photo.id, trip_id: attributes[:trip_id])
-
         photo.user_photo_url = (rails_blob_path(photo.user_photo, only_path: true) if photo.user_photo.attached?)
 
         photo
