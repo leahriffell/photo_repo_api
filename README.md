@@ -14,7 +14,7 @@ This GraphQL on Rails API ([deployed endpoint](https://photo-repo-api.herokuapp.
 *I created this API for my application to Shopify's Backend Engineering Internship program.  This is an API only (no user interface) but I plan to build out a React frontend for Virtual Escape.*
 
 #### Stack
-- Ruby on Rails, GraphQL, RSpec, Travis-CI, Heroku, Cloudinary (image hosting)
+- Ruby on Rails, GraphQL, RSpec, Travis-CI, Heroku, Cloudinary, PostgreSQL
 - Some of gems that I found most useful: 
     - pry, factory bot, faker, shoulda matchers, simplecov, vcr, webmock
 
