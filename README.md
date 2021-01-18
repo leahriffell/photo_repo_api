@@ -14,7 +14,7 @@ This GraphQL on Rails API ([deployed endpoint](https://photo-repo-api.herokuapp.
 *I created this API for my application to Shopify's Backend Engineering Internship program.  This is an API only (no user interface) but I plan to build out a React frontend for Virtual Escape.*
 
 #### Stack
-- Ruby on Rails, GraphQL, RSpec, Travis-CI, Heroku
+- Ruby on Rails, GraphQL, RSpec, Travis-CI, Heroku, Cloudinary (image hosting)
 - Some of gems that I found most useful: 
     - pry, factory bot, faker, shoulda matchers, simplecov, vcr, webmock
 
@@ -37,7 +37,7 @@ The [task](https://docs.google.com/document/d/1ZKRywXQLZWOqVOHC4JkF3LqdpO3Llpfk_
 
 I could have created a monolith app without the need for a separate front-end but I thought that displaying my API development skills would be more relevant to a backend engineering position. 
 
-I consumed 2 RESTful APIs and exposed a GraphQL endpoint with several queries and mutations.
+I consumed 2 RESTful APIs and exposed a GraphQL endpoint with several queries and mutations. For file upload I utilized Active Storage and am using [Cloudinary](https://cloudinary.com/) for image hosting.
 
 ## Local Setup
 - Versions
@@ -193,6 +193,7 @@ Endpoint (direct your POST requests here): https://photo-repo-api.herokuapp.com/
 
 ## Project Tracking
 **[GitHub project](https://github.com/leahriffell/photo_repo_api/projects/1)**
+  - I used branching and pull requests to maintain clean version control
 
 Next top priorities:
   - User authentication with Firebase or Auth0 ([#16](https://github.com/leahriffell/photo_repo_api/issues/16))
