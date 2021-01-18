@@ -1,4 +1,4 @@
-<img src="app/assets/images/logo.png" alt="logo" width="500"><br>
+<img src="app/assets/images/logo.png" alt="logo" max-width="600"><br>
 
 ![rails-badge](https://img.shields.io/badge/Rails-6.1.0-informational?style=flat-square) ![ruby-badge](https://img.shields.io/badge/Ruby-2.5.3-informational?style=flat-square) ![build-badge](https://img.shields.io/travis/leahriffell/photo_repo_api/main?style=flat-square) ![closed-pr-badge](https://img.shields.io/github/issues-pr-closed-raw/leahriffell/photo_repo_api?style=flat-square)
 
@@ -18,7 +18,7 @@ This GraphQL on Rails API ([deployed endpoint](https://photo-repo-api.herokuapp.
 - Some of the gems that I found most useful: 
     - pry, factory bot, faker, shoulda matchers, simplecov, vcr, webmock
 
-## Readme Content
+# Readme Content
 - [Approaching the Challenge](#approaching-the-challenge)
 - [Local Setup](#local-setup)
 - [External APIs](#external-apis)
@@ -28,7 +28,7 @@ This GraphQL on Rails API ([deployed endpoint](https://photo-repo-api.herokuapp.
 - [Project Tracking](#project-tracking)
 - [Contributor](#contributor)
 
-## Approaching the Challenge
+# Approaching the Challenge
 The [task](https://docs.google.com/document/d/1ZKRywXQLZWOqVOHC4JkF3LqdpO3Llpfk_CkZPR8bjak/edit): build an image repository
   - Features that meet this requirement: 
       - Upload photos (using Active Storage)
@@ -39,7 +39,7 @@ I could have created a monolith app without the need for a separate front-end bu
 
 I consumed 2 RESTful APIs and exposed a GraphQL endpoint with several queries and mutations. For file upload I utilized Active Storage and am using [Cloudinary](https://cloudinary.com/) for image hosting.
 
-## Local Setup
+# Local Setup
 - Versions
   - Rails 6.1.0
   - Ruby 2.5.3
@@ -62,18 +62,18 @@ I consumed 2 RESTful APIs and exposed a GraphQL endpoint with several queries an
   - `rails s`
   - You should be able to access the GraphQL interface and see available queries and mutations via the docs on [http://localhost:3000/graphiql](http://localhost:3000/graphiql)
 
-## External APIs
+# External APIs
 This API consumes the following APIs:
 - [Unsplash Search Photos API](https://unsplash.com/documentation#search-photos) to search for images at a destination
   - Requirements for use: [properly provide attribution for the photographer and Unsplash](https://help.unsplash.com/en/articles/2511315-guideline-attribution)
 - [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/) to assign latitude and longitude to a trip's location
 
-## Test Suite
+# Test Suite
 - Run with `bundle exec rspec`
 - All tests should be passing
 - 97% test coverage
 
-## GraphQL Schema
+# GraphQL Schema
 Endpoint (direct your POST requests here): https://photo-repo-api.herokuapp.com/graphql
 
 ### Resource Queries
@@ -188,10 +188,10 @@ Endpoint (direct your POST requests here): https://photo-repo-api.herokuapp.com/
       field :longitude, Float, null: true
     ```
 
-## Database Schema
-<img src="app/assets/images/schema.png" alt="database-schema" width="700"><br>
+# Database Schema
+<img src="app/assets/images/schema.png" alt="database-schema" max-width="800"><br>
 
-## Project Tracking
+# Project Tracking
 **[GitHub project](https://github.com/leahriffell/photo_repo_api/projects/1)**
   - I used branching and pull requests to maintain clean version control
 
@@ -202,6 +202,6 @@ Next top priorities:
   - More insight queries like most saved photo, trending destinations, etc. ([#55](https://github.com/leahriffell/photo_repo_api/issues/55), [#53](https://github.com/leahriffell/photo_repo_api/issues/53), [#54](https://github.com/leahriffell/photo_repo_api/issues/54))
 
 
-## Contributor
+# Contributor
 - Leah Riffell |  [Github](https://github.com/leahriffell)  |  [LinkedIn](https://www.linkedin.com/in/leah-riffell/)
 
