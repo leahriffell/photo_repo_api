@@ -15,7 +15,7 @@ This GraphQL on Rails API ([deployed endpoint](https://photo-repo-api.herokuapp.
 
 #### Stack
 - Ruby on Rails, GraphQL, RSpec, Travis-CI, Heroku, Cloudinary, PostgreSQL
-- Some of gems that I found most useful: 
+- Some of the gems that I found most useful: 
     - pry, factory bot, faker, shoulda matchers, simplecov, vcr, webmock
 
 ## Readme Content
