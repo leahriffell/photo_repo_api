@@ -1,8 +1,8 @@
 <img src="app/assets/images/logo.png" alt="logo" max-width="600"><br>
 
-![rails-badge](https://img.shields.io/badge/Rails-6.1.0-informational?style=flat-square) ![ruby-badge](https://img.shields.io/badge/Ruby-2.5.3-informational?style=flat-square) ![build-badge](https://img.shields.io/travis/leahriffell/photo_repo_api/main?style=flat-square) ![closed-pr-badge](https://img.shields.io/github/issues-pr-closed-raw/leahriffell/photo_repo_api?style=flat-square)
+![rails-badge](https://img.shields.io/badge/Rails-6.1.0-informational?style=flat-square) ![ruby-badge](https://img.shields.io/badge/Ruby-2.5.3-informational?style=flat-square) ![build-badge](https://img.shields.io/travis/com/leahriffell/virtual_escape_api/main?style=flat-square) ![closed-pr-badge](https://img.shields.io/github/issues-pr-closed-raw/leahriffell/virtual_escape_api?style=flat-square)
 
-This GraphQL on Rails API ([deployed endpoint](https://photo-repo-api.herokuapp.com/graphql)) serves queries and mutations for Virtual Escape, an application that allows you to travel in covid-safe style from your couch (or, let's be real, bed). There's a whole world out there so put on your best sweats and come TFH (travel from home)!
+This GraphQL on Rails API ([deployed endpoint](https://virtual-escape-api.herokuapp.com/graphql)) serves queries and mutations for Virtual Escape, an application that allows you to travel in covid-safe style from your couch (or, let's be real, bed). There's a whole world out there so put on your best sweats and come TFH (travel from home)!
 
 #### What can I do on Virtual Escape?
   - Search for a destination and see matching photos
@@ -74,7 +74,7 @@ This API consumes the following APIs:
 - 97% test coverage
 
 # GraphQL Schema
-Endpoint (direct your POST requests here): https://photo-repo-api.herokuapp.com/graphql
+Endpoint (direct your POST requests here): https://virtual-escape-api.herokuapp.com/graphql
 
 ### Resource Queries
 #### Photos
@@ -192,14 +192,14 @@ Endpoint (direct your POST requests here): https://photo-repo-api.herokuapp.com/
 <img src="app/assets/images/schema.png" alt="database-schema" max-width="800"><br>
 
 # Project Tracking
-**[GitHub project](https://github.com/leahriffell/photo_repo_api/projects/1)**
+**[GitHub project](https://github.com/leahriffell/virtual_escape_api/projects/1)**
   - I used branching and pull requests to maintain clean version control
 
 Next top priorities:
-  - User authentication with Firebase or Auth0 ([#16](https://github.com/leahriffell/photo_repo_api/issues/16))
-  - Research and implement testing of file uploading to avoid having to locally test in Altair ([#66](https://github.com/leahriffell/photo_repo_api/issues/66))
-  - Add edit and delete photo functionality ([#22](https://github.com/leahriffell/photo_repo_api/issues/22), [#40](https://github.com/leahriffell/photo_repo_api/issues/40))
-  - More insight queries like most saved photo, trending destinations, etc. ([#55](https://github.com/leahriffell/photo_repo_api/issues/55), [#53](https://github.com/leahriffell/photo_repo_api/issues/53), [#54](https://github.com/leahriffell/photo_repo_api/issues/54))
+  - User authentication with Firebase or Auth0 ([#16](https://github.com/leahriffell/virtual_escape_api/issues/16))
+  - Research and implement testing of file uploading to avoid having to locally test in Altair ([#66](https://github.com/leahriffell/virtual_escape_api/issues/66))
+  - Add edit and delete photo functionality ([#22](https://github.com/leahriffell/virtual_escape_api/issues/22), [#40](https://github.com/leahriffell/virtual_escape_api/issues/40))
+  - More insight queries like most saved photo, trending destinations, etc. ([#55](https://github.com/leahriffell/virtual_escape_api/issues/55), [#53](https://github.com/leahriffell/virtual_escape_api/issues/53), [#54](https://github.com/leahriffell/virtual_escape_api/issues/54))
 
 
 # Contributor
