@@ -5,7 +5,6 @@ module Mutations
       require 'uri'
       require 'open-uri'
 
-
       argument :trip_id, ID, required: true
       argument :user_photo, ApolloUploadServer::Upload, required: false
 
@@ -23,7 +22,7 @@ module Mutations
         photo
       end
 
-      private
+      private_class_method
 
       def self.upload_file(file)
         ActiveStorage::Blob.create_and_upload!(
