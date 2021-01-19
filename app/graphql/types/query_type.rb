@@ -1,7 +1,5 @@
 module Types
   class QueryType < Types::BaseObject
-    include Rails.application.routes.url_helpers
-
     # Photos
     field :search_photos, [Types::PhotoType], null: false, description: 'Returns 10 photos that match a search term' do
       argument :keyword, String, required: true

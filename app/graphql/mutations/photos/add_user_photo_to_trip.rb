@@ -1,10 +1,6 @@
 module Mutations
   module Photos
     class AddUserPhotoToTrip < Mutations::BaseMutation
-      include Rails.application.routes.url_helpers
-      require 'uri'
-      require 'open-uri'
-
       argument :trip_id, ID, required: true
       argument :user_photo, ApolloUploadServer::Upload, required: false
 
