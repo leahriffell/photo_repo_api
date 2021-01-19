@@ -7,11 +7,11 @@ RSpec.describe Types::QueryType do
       users = create_list(:user, 2, :with_trips)
 
       user_pic1 = create(:photo, url: nil, artist_name: nil, artist_profile: nil, unsplash_id: nil, user_uploaded: true)
-      unsplash_pic1 = create(:photo, user_photo_url: nil, user_uploaded: false)
+      unsplash_pic1 = create(:photo, user_uploaded: false)
       users[0].trips.first.photos << [user_pic1, unsplash_pic1]
 
       user_pic2 = create(:photo, url: nil, artist_name: nil, artist_profile: nil, unsplash_id: nil, user_uploaded: true)
-      unsplash_pic2 = create(:photo, user_photo_url: nil, user_uploaded: false)
+      unsplash_pic2 = create(:photo, user_uploaded: false)
       users[1].trips.first.photos << [user_pic2, unsplash_pic2]
 
       post graphql_path, params: { query: query }
@@ -29,7 +29,7 @@ RSpec.describe Types::QueryType do
             artistProfile: photo.artist_profile,
             unsplashId: photo.unsplash_id,
             userUploaded: photo.user_uploaded,
-            userPhotoUrl: photo.user_photo_url
+            userPhotoUrl: nil
             }
           end
         )
