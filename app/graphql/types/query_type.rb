@@ -1,7 +1,5 @@
 module Types
   class QueryType < Types::BaseObject
-    include Rails.application.routes.url_helpers
-
     # Photos
     field :search_photos, [Types::PhotoType], null: false, description: 'Returns 10 photos that match a search term' do
       argument :keyword, String, required: true
@@ -15,9 +13,6 @@ module Types
 
     def get_photos
       Photo.all.with_attached_user_photo
-      Photo.all.each do |photo|
-        photo.user_photo_url = rails_blob_path(photo.user_photo, only_path: true) if photo.user_photo.attached?
-      end
     end
 
     # Users

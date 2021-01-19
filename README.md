@@ -127,7 +127,7 @@ Endpoint (direct your POST requests here): https://photo-repo-api.herokuapp.com/
           argument :artist_profile, String, required: true
           argument :unsplash_id, String, required: true
         ```
-  - **Add User Photo To Trip**: upload user photo to trip (saves to database and creates new photo_trip record)
+  - **Add User Photo To Trip**: upload user photo to trip (saves to database, uploads image to Cloudinary, and creates new photo_trip record)
     - Type: [Photo](#photo)
     - Arguments: 
         ```
