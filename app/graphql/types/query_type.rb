@@ -15,9 +15,6 @@ module Types
 
     def get_photos
       Photo.all.with_attached_user_photo
-      Photo.all.each do |photo|
-        photo.user_photo_url = rails_blob_path(photo.user_photo, only_path: true) if photo.user_photo.attached?
-      end
     end
 
     # Users
