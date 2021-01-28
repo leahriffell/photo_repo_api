@@ -10,6 +10,7 @@ This GraphQL on Rails API ([deployed endpoint](https://photo-repo-api.herokuapp.
   - Add photos to your trip
     - upload a file
     - or save from your search results
+  - View stats like top saved destinations
 
 *I created this API for my application to Shopify's Backend Engineering Internship program.  This is an API only (no user interface) but I plan to build out a React frontend for Virtual Escape.*
 
@@ -197,6 +198,7 @@ Endpoint (direct your POST requests here): https://photo-repo-api.herokuapp.com/
 
 Next top priorities:
   - User authentication with Firebase or Auth0 ([#16](https://github.com/leahriffell/photo_repo_api/issues/16))
+  - Secure requests by requiring an API key ([#75](https://github.com/leahriffell/virtual_escape_api/issues/75))
   - Research and implement testing of file uploading to avoid having to locally test in Altair ([#66](https://github.com/leahriffell/photo_repo_api/issues/66))
   - Add edit and delete photo functionality ([#22](https://github.com/leahriffell/photo_repo_api/issues/22), [#40](https://github.com/leahriffell/photo_repo_api/issues/40))
   - More insight queries like most saved photo, trending destinations, etc. ([#55](https://github.com/leahriffell/photo_repo_api/issues/55), [#53](https://github.com/leahriffell/photo_repo_api/issues/53), [#54](https://github.com/leahriffell/photo_repo_api/issues/54))
